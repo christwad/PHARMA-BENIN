@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -43,25 +44,21 @@ const CTA = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <CTAButton 
-              text="Se connecter" 
-              path="/login" 
-              className="bg-white hover:bg-benin-green hover:text-white transition-all"
-            />
-            <CTAButton 
-              text="Créer un compte" 
-              path="/register" 
-              className="bg-white hover:bg-benin-green hover:text-white transition-all"
-            />
-            <CTAButton 
-              text="Inscrire ma pharmacie" 
-              path="/pharmacy-signup" 
-              className="bg-white hover:bg-benin-green hover:text-white transition-all"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default CTA;
+                          text="Espace Client" 
+                          path="/login" 
+                          className="bg-white hover:bg-benin-green hover:text-white transition-all"
+                        />
+                        <CTAButton 
+                                      text="Espace Pharmacie" 
+                                      path="/pharmacy-signup" 
+                                      className="bg-white hover:bg-benin-green hover:text-white transition-all"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                          );
+                        };
+                        
+                        export default CTA;
+                        

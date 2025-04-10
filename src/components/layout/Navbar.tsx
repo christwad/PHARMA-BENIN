@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -5,9 +6,7 @@ import {
   Search, 
   ShoppingCart, 
   Menu, 
-  X, 
-  User,
-  LogIn
+  Shield
 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -102,8 +101,13 @@ const Navbar = () => {
           </Link>
           <Link to="/login">
             <Button variant="outline" size="sm" className="hidden md:flex gap-2 border-benin-green text-benin-green hover:bg-benin-green hover:text-white">
-              <LogIn className="h-4 w-4" />
-              <span>Connexion Pharmacie</span>
+            <span>Espace Client</span>
+            </Button>
+          </Link>
+          <Link to="/admin-login">
+            <Button variant="outline" size="sm" className="hidden md:flex gap-2 border-gray-300 text-gray-700 hover:bg-gray-100">
+              <Shield className="h-4 w-4" />
+              <span>Admin</span>
             </Button>
           </Link>
 
@@ -138,8 +142,17 @@ const Navbar = () => {
                       className="w-full"
                     >
                       <Button variant="outline" className="w-full justify-start gap-2 border-benin-green text-benin-green hover:bg-benin-green hover:text-white">
-                        <LogIn className="h-4 w-4" />
-                        <span>Connexion Pharmacie</span>
+                      <span>Espace Client</span>
+                      </Button>
+                    </Link>
+                    <Link 
+                      to="/admin-login" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="w-full"
+                    >
+                      <Button variant="outline" className="w-full justify-start gap-2 border-gray-300 text-gray-700 hover:bg-gray-100">
+                        <Shield className="h-4 w-4" />
+                        <span>Admin</span>
                       </Button>
                     </Link>
                   </div>
